@@ -19,10 +19,17 @@
     <td mat-cell *matCellDef="let element">{{ element.received_date }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="assigned_to">
-    <th mat-header-cell *matHeaderCellDef>Assigned to</th>
+  <ng-container matColumnDef="assigned_to_person_name">
+    <th mat-header-cell *matHeaderCellDef>Assigned to: name</th>
+    <td class="wrap" mat-cell *matCellDef="let element">
+      {{ displayAssignedToPersonName(element) }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="assigned_to_status">
+    <th mat-header-cell *matHeaderCellDef>Assigned to: status</th>
     <td mat-cell *matCellDef="let element">
-      {{ displayAssignedTo(element) }}
+      {{ displayAssignedToStatus(element) }}
     </td>
   </ng-container>
 
