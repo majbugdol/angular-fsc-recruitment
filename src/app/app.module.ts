@@ -3,20 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableComponent } from './work-orders/table/table.component';
-import { FilterComponent } from './work-orders/filter/filter.component';
+import { TableComponent } from './work-orders-page/table/table.component';
+import { FilterComponent } from './work-orders-page/filter/filter.component';
+import { WorkOrdersPageComponent } from './work-orders-page/work-orders-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    FilterComponent
+    FilterComponent,
+    WorkOrdersPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
