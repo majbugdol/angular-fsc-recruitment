@@ -1,3 +1,13 @@
+<mat-form-field class="form-field" appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input
+    matInput
+    (keyup)="applyFilter($event)"
+    placeholder="search by description"
+    #input
+  />
+</mat-form-field>
+
 <table
   *ngIf="workOrders.length"
   mat-table

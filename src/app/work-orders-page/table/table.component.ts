@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { IWorkOrder } from 'src/app/services/workload.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-table',
@@ -54,11 +55,15 @@ export class TableComponent implements OnChanges {
     } else return '-';
   }
 
-  public dataSource: IWorkOrder[];
+  public dataSource = new MatTableDataSource(this.workOrders);
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
   constructor() {}
 
   ngOnChanges(): void {
-    this.dataSource = this.workOrders;
+    this.dataSource = new MatTableDataSource(this.workOrders);
   }
 }
