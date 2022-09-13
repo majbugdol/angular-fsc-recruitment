@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { WorkloadService } from '../services/workload.service';
+import {
+  IWorkloadData,
+  IWorkOrder,
+  WorkloadService,
+} from '../services/workload.service';
 
 @Component({
   selector: 'app-work-orders-page',
@@ -7,9 +11,22 @@ import { WorkloadService } from '../services/workload.service';
   styleUrls: ['./work-orders-page.component.scss'],
 })
 export class WorkOrdersPageComponent implements OnInit {
+  private workloadData: IWorkloadData | null = null;
+
   constructor(private workloadService: WorkloadService) {}
 
+  public get workOrders(): IWorkOrder[] {
+    return this.workloadData?.response.data ?? [];
+  }
+
+  private getData(): void {
+    this.workloadService.getData().subscribe((res) => {
+      console.log(res);
+      this.workloadData = res as IWorkloadData;
+    });
+  }
+
   ngOnInit(): void {
-    this.workloadService.getData();
+    this.getData();
   }
 }
