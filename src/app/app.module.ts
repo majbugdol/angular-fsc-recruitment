@@ -9,6 +9,9 @@ import { WorkOrdersPageComponent } from './work-orders-page/work-orders-page.com
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     FilterComponent,
     WorkOrdersPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
