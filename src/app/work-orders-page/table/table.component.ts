@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { IWorkOrder } from 'src/app/services/workload.service';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -7,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent implements OnChanges {
+export class TableComponent implements OnChanges, OnInit {
   @Input() workOrders: IWorkOrder[] = [];
   // dataSource2 = new MatTableDataSource(table);
 
@@ -63,6 +63,13 @@ export class TableComponent implements OnChanges {
   }
   constructor() {}
 
+  ngOnInit(): void {
+    this.dataSource.filterPredicate = function (record, filter) {
+      return (
+        record.description.toLocaleLowerCase() == filter.toLocaleLowerCase()
+      );
+    };
+  }
   ngOnChanges(): void {
     this.dataSource = new MatTableDataSource(this.workOrders);
   }
