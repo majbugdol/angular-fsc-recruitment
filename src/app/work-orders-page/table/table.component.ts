@@ -64,10 +64,8 @@ export class TableComponent implements OnChanges, OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.dataSource.filterPredicate = function (record, filter) {
-      return (
-        record.description.toLocaleLowerCase() == filter.toLocaleLowerCase()
-      );
+    this.dataSource.filterPredicate = function (data, filter: string): boolean {
+      return data.description.toLowerCase().includes(filter);
     };
   }
   ngOnChanges(): void {

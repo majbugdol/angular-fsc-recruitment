@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  IWorkloadData,
-  IWorkOrder,
-  WorkloadService,
-} from '../services/workload.service';
+import { IWorkloadData, WorkloadService } from '../services/workload.service';
 
 @Component({
   selector: 'app-work-orders-page',
@@ -16,9 +12,14 @@ export class WorkOrdersPageComponent implements OnInit {
   constructor(private workloadService: WorkloadService) {}
 
   private getData(): void {
-    this.workloadService.getData().subscribe((res) => {
-      this.workloadData = res as IWorkloadData;
-    });
+    this.workloadService.getData().subscribe(
+      (res) => {
+        this.workloadData = res as IWorkloadData;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 
   ngOnInit(): void {
