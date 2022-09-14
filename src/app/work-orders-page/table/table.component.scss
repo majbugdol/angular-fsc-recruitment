@@ -5,3 +5,12 @@ table {
   font-size: 14px;
   width: 100%;
 }
+
+.mat-column-assigned_to_person_name,
+.mat-column-assigned_to_status {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 15% !important;
+  width: 15% !important;
+  word-break: break-word;
+}

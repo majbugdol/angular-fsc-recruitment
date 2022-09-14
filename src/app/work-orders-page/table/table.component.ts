@@ -9,7 +9,6 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class TableComponent implements OnChanges, OnInit {
   @Input() workOrders: IWorkOrder[] = [];
-  // dataSource2 = new MatTableDataSource(table);
 
   public displayedColumns: string[] = [
     'work_order_id',
@@ -55,9 +54,11 @@ export class TableComponent implements OnChanges, OnInit {
     } else return '-';
   }
 
-  public dataSource = new MatTableDataSource(this.workOrders);
+  public dataSource: MatTableDataSource<IWorkOrder> = new MatTableDataSource(
+    this.workOrders
+  );
 
-  applyFilter(event: Event) {
+  applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }

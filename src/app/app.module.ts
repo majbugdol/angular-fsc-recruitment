@@ -8,6 +8,7 @@ import { WorkOrdersPageComponent } from './work-orders-page/work-orders-page.com
 
 import { HttpClientModule } from '@angular/common/http';
 
+//Angular Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
