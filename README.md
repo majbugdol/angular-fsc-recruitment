@@ -19,8 +19,10 @@ After that you should be able to build the server by running the `ng serve` in y
 
 Podgląd:
 
-Desktop:
+Desktop:  
+
 ![Alt text](/./src/assets/readme%20screenshots/desktop-screenshot.png?raw=true "Desktop-screenshot")
 
-Mobile (dostępny suwak, kolumna Work Order ID jest przypięta na stałe po lewej stronie)
+Mobile (dostępny suwak, kolumna Work Order ID jest przypięta na stałe po lewej stronie):  
+
 ![Alt text](/./src/assets/readme%20screenshots/mobile-screenshot.png?raw=true "Mobile-screenshot")
