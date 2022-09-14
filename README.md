@@ -5,7 +5,7 @@ The project was created according to the rules of recruitment and based on provi
 
 # Installment and opening the project
 
-1. To run the project on your device, first click on code tab and either copy the `https://github.com/majbugdol/angular-fsc-recruitment.git` path to clone the repository onto your device using git commend, or download the project as ZIP.  
+1. To run the project on your device, first click on code tab and either copy the https://github.com/majbugdol/angular-fsc-recruitment.git path to clone the repository onto your device using git commend, or download the project as ZIP.  
 
 
    ![Alt text](/./src/assets/readme%20screenshots/github-screenshot.png?raw=true "Github")
