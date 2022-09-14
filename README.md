@@ -21,4 +21,4 @@ Podgląd:
 
 ![Alt text](/./src/assets/readme%20screenshots/desktop-screenshot.png?raw=true "Desktop-screenshot")
 
-![Alt text](/./src/assets/readme%20screenshots/mobile-screenshot.png.png?raw=true "Desktop-screenshot")
+![Alt text](/./src/assets/readme%20screenshots/mobile-screenshot.png?raw=true "Mobile-screenshot")
