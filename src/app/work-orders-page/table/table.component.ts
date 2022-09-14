@@ -58,7 +58,7 @@ export class TableComponent implements OnChanges, OnInit {
     this.workOrders
   );
 
-  applyFilter(event: Event): void {
+  public applyFilter(event: Event): void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
@@ -69,6 +69,7 @@ export class TableComponent implements OnChanges, OnInit {
       return data.description.toLowerCase().includes(filter);
     };
   }
+
   ngOnChanges(): void {
     this.dataSource = new MatTableDataSource(this.workOrders);
   }
