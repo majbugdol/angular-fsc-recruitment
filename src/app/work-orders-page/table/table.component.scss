@@ -1,9 +1,44 @@
-table {
-  width: 100%;
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  max-height: 75vh;
+  width: 95vw;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    max-height: auto;
+    height: auto;
+  }
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
+
+  table {
+    width: 800px;
+
+    @media (min-width: 768px) {
+      width: 1200px;
+    }
+    @media (min-width: 992px) {
+      width: 100%;
+    }
+  }
 }
+
 .mat-form-field {
+  margin-top: 30px;
   font-size: 14px;
-  width: 100%;
+  width: 800px;
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+    width: 1200px;
+  }
+
+  @media (min-width: 992px) {
+    width: 100%;
+  }
 }
 
 .mat-column-assigned_to_person_name,
@@ -13,4 +48,13 @@ table {
   flex: 0 0 15% !important;
   width: 15% !important;
   word-break: break-word;
+}
+
+.mat-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+
+th.mat-column-description,
+td.mat-column-description {
+  padding-left: 10px;
 }
